@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "name": "Vinaigrette",
+    "description": "Klassieke vinaigrette maken van culy",
+    "persons": 4
+  },
+  "ingriedents": [
+    {
+      "amount": 0.5,
+      "ingriedent": "Dijon-mosterd",
+      "measurement": "eetlepel"
+    },
+    {
+      "amount": 0.5,
+      "ingriedent": "citroensap",
+      "measurement": "eetlepel"
+    },
+    {
+      "amount": 0.5,
+      "ingriedent": "azijn",
+      "measurement": "eetlepel"
+    },
+    {
+      "amount": 100,
+      "ingriedent": "extra vergine olijfolie",
+      "measurement": "ml"
+    },
+    {
+      "ingriedent": "Zout"
+    },
+    {
+      "ingriedent": "Peper"
+    }
+  ]
+}
