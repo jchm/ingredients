@@ -5,7 +5,7 @@
     </h1>
     <nuxt-link
       v-for="recipe in recipes"
-      :key="recipe"
+      :key="recipe.file"
       class="btn"
       :to="`/recipe/${recipe.file}`"
       >{{ recipe.name }}</nuxt-link

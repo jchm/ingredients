@@ -1,9 +1,9 @@
 <template>
   <div class="container p-4">
-    <article class="bg-white shadow overflow-hidden">
+    <article class="bg-white shadow overflow-hidden rounded-sm">
       <header class="px-4 py-5 border-b border-gray-200">
         <h1 class="text-lg leading-6 font-medium text-gray-900">
-          Ingrediënten voor {{ title }}
+          Ingrediënten voor {{ title.toLowerCase() }}
         </h1>
         <p v-if="description" class="text-gray-700 mb-0" v-text="description" />
       </header>

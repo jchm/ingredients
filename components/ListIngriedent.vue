@@ -1,7 +1,7 @@
 <template>
   <article>
     {{ am }}
-    {{ ingriedent }}
+    {{ ingriedent.toLowerCase() }}
   </article>
 </template>
 
