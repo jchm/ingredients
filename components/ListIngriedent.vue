@@ -6,7 +6,7 @@
 </template>
 
 <script lang="ts">
-import Vue, { PropOptions } from 'vue';
+import Vue from 'vue'
 
 export default Vue.extend({
   props: {
@@ -24,36 +24,35 @@ export default Vue.extend({
     }
   },
   computed: {
-    am() : void|string {
+    am(): void | string {
       if (!this.amount) {
-        return;
+        return
       }
 
-      if (this.measurement && this.measurement === "gr") {
+      if (this.measurement && this.measurement === 'gr') {
         if (this.amount > 1000) {
-          return `${this.amount / 1000}kg`;
+          return `${this.amount / 1000}kg`
         }
       }
 
-      if (this.measurement && this.measurement === "ml") {
+      if (this.measurement && this.measurement === 'ml') {
         if (this.amount > 1000) {
-          return `${this.amount / 1000}l`;
+          return `${this.amount / 1000}l`
         }
       }
 
-      if (this.measurement && this.measurement === "stuk") {
+      if (this.measurement && this.measurement === 'stuk') {
         if (this.amount === 0.5) {
-          return `half`;
+          return `half`
         }
 
         if (this.amount >= 1) {
-          return this.amount.toString();
+          return this.amount.toString()
         }
       }
 
-      return `${this.amount}${this.measurement ? this.measurement : ''}`;
+      return `${this.amount}${this.measurement ? this.measurement : ''}`
     }
   }
-});
+})
 </script>
-

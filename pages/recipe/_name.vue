@@ -50,19 +50,20 @@ export default Vue.extend({
       description: null,
       recipeData: null,
       persons: 1,
-      recipePersons: 4
+      recipePersons: 1
     }
   },
   created() {
     const recipeName: string = this.$route.params.name
     const {
       ingriedents,
-      meta: { name, description }
+      meta: { name, description, persons }
     } = require(`~/data/${recipeName}.json`)
 
     this.recipeData = ingriedents
     this.title = name
     this.description = description
+    this.recipePersons = persons
   },
   methods: {
     calculate(amount: number): void | number {

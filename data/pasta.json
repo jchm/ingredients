@@ -1,7 +1,8 @@
 {
   "meta": {
     "name": "Pasta",
-    "Description": "Pasta per persoon"
+    "description": "Pasta per persoon",
+    "persons": 1
   },
   "ingriedents": [
     {

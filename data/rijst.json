@@ -1,7 +1,8 @@
 {
   "meta": {
     "name": "Rijst",
-    "description": "Rijst per persoon"
+    "description": "Rijst per persoon",
+    "persons": 1
   },
   "ingriedents": [
     {

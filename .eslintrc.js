@@ -16,5 +16,6 @@ module.exports = {
   ],
   // add your custom rules here
   rules: {
-  }
+  },
+  ignorePatterns: ["*.config.js"]
 }
