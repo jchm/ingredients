@@ -1,0 +1,32 @@
+{
+  "meta": {
+    "name": "Salsa",
+    "description": "Simple salsa van de allerhande",
+    "persons": 4
+  },
+  "ingriedents": [
+    {
+      "amount": 3,
+      "ingriedent": "Trostomaten"
+    },
+    {
+      "amount": 1,
+      "ingriedent": "Rode ui"
+    },
+    {
+      "amount": 1,
+      "ingriedent": "Knoflook",
+      "measurement": "teen"
+    },
+    {
+      "amount": 2,
+      "ingriedent": "Rode peper"
+    },
+    {
+      "amount": 2,
+      "ingriedent": "Verse koriander",
+      "measurement": "takjes"
+    }
+  ]
+}
+

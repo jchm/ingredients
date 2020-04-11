@@ -79,6 +79,6 @@ export default Vue.extend({
 
 <style scoped>
 .counter {
-  @apply py-1 px-3 rounded-sm;
+  @apply w-8 h-8 rounded-sm text-gray-900;
 }
 </style>

@@ -51,7 +51,7 @@ export default Vue.extend({
         }
       }
 
-      return `${this.amount}${this.measurement ? this.measurement : ''}`
+      return `${this.amount} ${this.measurement ? this.measurement : ''}`
     }
   }
 })
