@@ -2,8 +2,10 @@
   <div class="container p-4">
     <article class="bg-white shadow overflow-hidden">
       <header class="px-4 py-5 border-b border-gray-200">
-        <h1 class="text-lg leading-6 font-medium text-gray-900">Ingrediënten voor {{ title }}</h1>
-        <p v-if="description" v-text="description" class="text-gray-700 mb-0"  />
+        <h1 class="text-lg leading-6 font-medium text-gray-900">
+          Ingrediënten voor {{ title }}
+        </h1>
+        <p v-if="description" class="text-gray-700 mb-0" v-text="description" />
       </header>
       <div class="px-4 py-5">
         <ListIngriedent
@@ -15,21 +17,33 @@
         />
       </div>
       <footer class="px-4 py-5 border-t border-gray-200">
-        <p class="mb-2">Ingrediënten voor <strong>{{ persons }}</strong> {{ persons == 1 ? 'persoon' : 'personen' }}</p>
+        <p class="mb-2">
+          Ingrediënten voor <strong>{{ persons }}</strong>
+          {{ persons == 1 ? 'persoon' : 'personen' }}
+        </p>
 
-        <button @click="persons++" class="counter bg-gray-500">+</button>
-        <button @click="persons--" :disabled="persons <= 1" class="counter bg-gray-400">-</button>
+        <button class="counter bg-gray-500" @click="persons++">+</button>
+        <button
+          :disabled="persons <= 1"
+          class="counter bg-gray-400"
+          @click="persons--"
+        >
+          -
+        </button>
       </footer>
-   </article>
+    </article>
   </div>
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
+import Vue from 'vue'
 
-import ListIngriedent from "~/components/ListIngriedent";
+import ListIngriedent from '../../components/ListIngriedent.vue'
 
 export default Vue.extend({
+  components: {
+    ListIngriedent
+  },
   data() {
     return {
       title: null,
@@ -37,29 +51,28 @@ export default Vue.extend({
       recipeData: null,
       persons: 1,
       recipePersons: 4
-    };
-  },
-  components: {
-    ListIngriedent
+    }
   },
   created() {
-    let recipeName:string = this.$route.params.name;
-    let {ingriedents, meta: {name, description}} =  require(`~/data/${recipeName}.json`);
+    const recipeName: string = this.$route.params.name
+    const {
+      ingriedents,
+      meta: { name, description }
+    } = require(`~/data/${recipeName}.json`)
 
-
-    this.recipeData = ingriedents;
-    this.title = name;
-    this.description = description;
+    this.recipeData = ingriedents
+    this.title = name
+    this.description = description
   },
   methods: {
-    calculate(amount: number): void|number {
+    calculate(amount: number): void | number {
       if (!amount) {
-        return;
+        return
       }
 
-      return (amount / this.recipePersons) * this.persons;
+      return (amount / this.recipePersons) * this.persons
     }
-  } 
+  }
 })
 </script>
 
