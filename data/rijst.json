@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "name": "Rijst",
+    "description": "Rijst per persoon"
+  },
+  "ingriedents": [
+    {
+      "amount": 75,
+      "ingriedent": "Rijst",
+      "measurement": "gr"
+    }
+  ]
+}
+

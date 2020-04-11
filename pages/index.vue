@@ -1,74 +1,43 @@
 <template>
-  <div class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        ingredients
-      </h1>
-      <h2 class="subtitle">
-        My bedazzling Nuxt.js project
-      </h2>
-      <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
+  <div class="container p-4 text-center">
+    <h1 class="text-lg leading-6 font-medium text-gray-900 mb-4">Kies recept</h1>
+    <nuxt-link class="btn" v-for="recipe in recipes" :to="`/recipe/${recipe.file}`" :key="recipe">{{ recipe.name }}</nuxt-link>
   </div>
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-import Logo from '~/components/Logo.vue'
+import Vue from 'vue';
 
 export default Vue.extend({
-  components: {
-    Logo
+  data() {
+    return {
+      recipes: []
+    };
+  },
+  created() {
+    let recipes:Array<Object> = [];
+    var context = require.context("../data/", true, /\.json$/);
+
+    context.keys().forEach(function (key) {
+        let recipe = context(key);
+
+        recipes.push({
+          name: recipe.meta.name,
+          file: key.replace('.json', '').replace('./','')
+        });
+    });
+
+   this.recipes = recipes;
   }
-})
+})  
 </script>
 
-<style>
-/* Sample `apply` at-rules with Tailwind CSS
-.container {
-  @apply min-h-screen flex justify-center items-center text-center mx-auto;
-}
-*/
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+<style scoped>
+.btn {
+  @apply py-1 px-3 rounded-full border-gray-500 border mx-1 ;
 }
 
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+.btn:hover {
+ @apply bg-teal-500 border-teal-500 text-white;
 }
 </style>

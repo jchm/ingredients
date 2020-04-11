@@ -1,0 +1,70 @@
+<template>
+  <div class="container p-4">
+    <article class="bg-white shadow overflow-hidden">
+      <header class="px-4 py-5 border-b border-gray-200">
+        <h1 class="text-lg leading-6 font-medium text-gray-900">Ingrediënten voor {{ title }}</h1>
+        <p v-if="description" v-text="description" class="text-gray-700 mb-0"  />
+      </header>
+      <div class="px-4 py-5">
+        <ListIngriedent
+          v-for="(ingriedent, index) in recipeData"
+          :key="index"
+          :amount="calculate(ingriedent.amount)"
+          :measurement="ingriedent.measurement"
+          :ingriedent="ingriedent.ingriedent"
+        />
+      </div>
+      <footer class="px-4 py-5 border-t border-gray-200">
+        <p class="mb-2">Ingrediënten voor <strong>{{ persons }}</strong> {{ persons == 1 ? 'persoon' : 'personen' }}</p>
+
+        <button @click="persons++" class="counter bg-gray-500">+</button>
+        <button @click="persons--" :disabled="persons <= 1" class="counter bg-gray-400">-</button>
+      </footer>
+   </article>
+  </div>
+</template>
+
+<script lang="ts">
+import Vue from 'vue';
+
+import ListIngriedent from "~/components/ListIngriedent";
+
+export default Vue.extend({
+  data() {
+    return {
+      title: null,
+      description: null,
+      recipeData: null,
+      persons: 1,
+      recipePersons: 4
+    };
+  },
+  components: {
+    ListIngriedent
+  },
+  created() {
+    let recipeName:string = this.$route.params.name;
+    let {ingriedents, meta: {name, description}} =  require(`~/data/${recipeName}.json`);
+
+
+    this.recipeData = ingriedents;
+    this.title = name;
+    this.description = description;
+  },
+  methods: {
+    calculate(amount: number): void|number {
+      if (!amount) {
+        return;
+      }
+
+      return (amount / this.recipePersons) * this.persons;
+    }
+  } 
+})
+</script>
+
+<style scoped>
+.counter {
+  @apply py-1 px-3 rounded-sm;
+}
+</style>

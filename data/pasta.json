@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "name": "Pasta",
+    "Description": "Pasta per persoon"
+  },
+  "ingriedents": [
+    {
+      "amount": 75,
+      "ingriedent": "Pasta",
+      "measurement": "gr"
+    }
+  ]
+}
+

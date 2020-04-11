@@ -1,0 +1,16 @@
+/* purgecss start ignore */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+
+/* purgecss end ignore */
+@import 'tailwindcss/utilities';
+
+body {
+  @apply bg-gray-100
+}
+
+.container {
+  @apply min-h-screen mx-auto;
+  
+  max-width: 35rem;
+}
