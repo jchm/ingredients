@@ -1,6 +1,6 @@
 # ingredients
 
-> My bedazzling Nuxt.js project
+PoC for trying out Typescript, Nuxt, Guthub actions & Zeit Now
 
 ## Build Setup
 
