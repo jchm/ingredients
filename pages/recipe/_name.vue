@@ -85,7 +85,7 @@ export default Vue.extend({
   @apply w-8 h-8 rounded-sm text-gray-900;
 
   &:hover {
-      @apply bg-primary border-primary text-white;
+    @apply bg-primary border-primary text-white;
   }
 }
 </style>
