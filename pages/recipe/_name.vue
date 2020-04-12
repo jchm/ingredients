@@ -62,6 +62,9 @@ export default Vue.extend({
       meta: { name, description, persons }
     } = require(`~/data/${recipeName}.json`)
 
+    const bla = [];
+    bla = 'feyenoord'
+
     this.recipeData = ingriedents
     this.title = name
     this.description = description
@@ -70,7 +73,7 @@ export default Vue.extend({
   methods: {
     calculate(amount: number): void | number {
       if (!amount) {
-        return
+        return false
       }
 
       return (amount / this.recipePersons) * this.persons

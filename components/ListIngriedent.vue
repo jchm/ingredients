@@ -12,7 +12,7 @@ export default Vue.extend({
       default: null
     },
     measurement: {
-      type: String,
+       type: String,
       default: null
     },
     ingriedent: {
