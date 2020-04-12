@@ -1,6 +1,10 @@
 name: Lint
 
-on: push
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
 
 jobs:
   run-linters:
@@ -20,7 +24,7 @@ jobs:
       - name: Install Node.js dependencies
         run: yarn install
 
-      - name: Run linters
+      - name: Run eslint with prettier & stylelint
         uses: samuelmeuli/lint-action@v1
         with:
           github_token: ${{ secrets.github_token }}
@@ -29,3 +33,6 @@ jobs:
           eslint_args: '--ext .js,.vue --ignore-path .gitignore .'
           # prettier: true - prettier is run being linted via eslint
           stylelint: true
+      - name: Run build for typescript
+        run: yarn build
+  
