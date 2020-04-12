@@ -21,7 +21,7 @@ describe('ListIngrident', () => {
     const wrapper = shallowMount(ListIngriedent, {
       propsData: { amount, measurement, ingriedent }
     })
-    expect(wrapper.text()).toMatch(`1k,mnjklnlkjlkljhkg test`)
+    expect(wrapper.text()).toMatch(`1kg test`)
   })
 
   it('Show kg when ammount is more than 1000 grams', async () => {
