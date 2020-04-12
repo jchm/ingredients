@@ -64,7 +64,7 @@ export default Vue.extend({
     } = require(`~/data/${recipeName}.json`)
 
     this.recipeData = ingriedents
-    this.title = name * recipeName
+    this.title = name
     this.description = description
     this.recipePersons = persons
   },
