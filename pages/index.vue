@@ -44,6 +44,6 @@ export default Vue.extend({
 }
 
 .btn:hover {
-  @apply bg-teal-500 border-teal-500 text-white;
+  @apply bg-primary border-primary text-white;
 }
 </style>
