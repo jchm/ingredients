@@ -26,5 +26,6 @@ jobs:
           github_token: ${{ secrets.github_token }}
           # Enable linters
           eslint: true
+          eslint_args: '--ext .js,.vue --ignore-path .gitignore .'
           # prettier: true - prettier is run being linted via eslint
           stylelint: true
