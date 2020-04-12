@@ -1,6 +1,6 @@
 # ingredients
 
-PoC for trying out Typescript, Nuxt, Guthub actions & Zeit Now
+PoC for trying out Typescript, Tailwind, Nuxt, Guthub actions & Zeit Now
 
 ## Build Setup
 
