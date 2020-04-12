@@ -22,11 +22,11 @@
           {{ persons == 1 ? 'persoon' : 'personen' }}
         </p>
 
-        <button class="counter bg-gray-500" @click="persons++">+</button>
+        <button class="counter bg-gray-500" @click.prevent="persons++">+</button>
         <button
           :disabled="persons <= 1"
           class="counter bg-gray-400"
-          @click="persons--"
+          @click.prevent="persons--"
         >
           -
         </button>

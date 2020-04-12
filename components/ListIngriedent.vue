@@ -1,8 +1,5 @@
 <template>
-  <article>
-    {{ am }}
-    {{ ingriedent.toLowerCase() }}
-  </article>
+  <article>{{ am }} {{ ingriedent.toLowerCase() }}</article>
 </template>
 
 <script lang="ts">
@@ -30,24 +27,14 @@ export default Vue.extend({
       }
 
       if (this.measurement && this.measurement === 'gr') {
-        if (this.amount > 1000) {
+        if (this.amount >= 1000) {
           return `${this.amount / 1000}kg`
         }
       }
 
       if (this.measurement && this.measurement === 'ml') {
-        if (this.amount > 1000) {
+        if (this.amount >= 1000) {
           return `${this.amount / 1000}l`
-        }
-      }
-
-      if (this.measurement && this.measurement === 'stuk') {
-        if (this.amount === 0.5) {
-          return `half`
-        }
-
-        if (this.amount >= 1) {
-          return this.amount.toString()
         }
       }
 
