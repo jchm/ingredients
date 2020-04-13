@@ -46,6 +46,17 @@ export default Vue.extend({
   components: {
     ListIngriedent
   },
+  validate({ params }): boolean {
+    const recipeName: string = params.name
+
+    try {
+      require.resolve(`~/data/${recipeName}.json`)
+
+      return true
+    } catch (e) {
+      return false
+    }
+  },
   data() {
     return {
       title: null,
