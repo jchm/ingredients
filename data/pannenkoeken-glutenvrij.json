@@ -1,14 +1,14 @@
 {
   "meta": {
     "name": "Pannenkoeken (glutenvrij)",
-    "description": "Van de koopmans",
+    "description": "Van de Koopmans",
     "persons": 4
   },
   "ingriedents": [
     {
       "amount": 1,
-      "ingriedent": "Pak",
-      "measurement": "Koopmans pannenkoeken glutenvrij"
+      "ingriedent": "Koopmans pannenkoeken glutenvrij",
+      "measurement": "Pak"
     },
     {
       "amount": 3,
@@ -16,8 +16,8 @@
     },
     {
       "amount": 800,
-      "ingriedent": "ml",
-      "measurement": "Melk"
+      "ingriedent": "Melk",
+      "measurement": "ml"
     },
     {
       "ingriedent": "Boter of ei"
