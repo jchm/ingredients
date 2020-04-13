@@ -11,6 +11,10 @@
       "measurement": "Koopmans pannenkoeken glutenvrij"
     },
     {
+      "amount": 3,
+      "ingriedent": "Eieren"
+    },
+    {
       "amount": 800,
       "ingriedent": "ml",
       "measurement": "Melk"
