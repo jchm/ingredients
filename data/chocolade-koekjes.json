@@ -1,0 +1,50 @@
+{
+  "meta": {
+    "name": "Chocolade koekjes",
+    "description": "Van Alison Roman (4 koekjes per persoon)",
+    "persons": 6
+  },
+  "ingriedents": [
+    {
+      "amount": 90,
+      "ingriedent": "Ongezouten boter",
+      "measurement": "gr"
+    },
+    {
+      "amount": 310,
+      "ingriedent": "Poedersuiker",
+      "measurement": "gr"
+    },
+    {
+      "amount": 90,
+      "ingriedent": "Cacaopoeder (ongezoet)",
+      "measurement": "gr"
+    },
+    {
+      "amount": 1,
+      "ingriedent": "Kosher zout",
+      "measurement": "theelepel"
+    },
+    {
+      "amount": 2,
+      "ingriedent": "Eiwit van grote eieren"
+    },
+    {
+      "amount": 1,
+      "ingriedent": "Grote ei"
+    },
+    {
+      "amount": 225,
+      "ingriedent": "chocolade (tenminste 67%),  gesneden",
+      "measurement": "gr"
+    },
+    {
+      "amount": 60,
+      "ingriedent": "fijngesneden hazelnoten, amandelen, pistache, pecan pf walnoten (optioneel) ",
+      "measurement": "gr"
+    },
+    {
+      "ingriedent": "Flaky zee zout"
+    }
+  ]
+}
