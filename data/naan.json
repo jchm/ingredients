@@ -1,0 +1,34 @@
+{
+  "meta": {
+    "name": "Naan",
+    "description": "Rijst per persoon",
+    "persons": 6
+  },
+  "ingriedents": [
+    {
+      "amount": 624,
+      "ingriedent": "Bloem",
+      "measurement": "gr"
+    },
+    {
+      "amount": 7,
+      "ingriedent": "Gist",
+      "measurement": "gr"
+    },
+    {
+      "amount": 12,
+      "ingriedent": "Zout",
+      "measurement": "gr"
+    },
+    {
+      "amount": 22,
+      "ingriedent": "Suiker",
+      "measurement": "gr"
+    },
+    {
+      "amount": 397,
+      "ingriedent": "Yoghurt/Melk",
+      "measurement": "gr"
+    }
+  ]
+}
